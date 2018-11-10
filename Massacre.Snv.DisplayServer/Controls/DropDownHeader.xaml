@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Massacre.Snv.DisplayServer.Controls.DropDownHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Massacre.Snv.DisplayServer.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Name="contentRow" Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="textBlock" Grid.Row="0" Background="#a000" Margin="0" Padding="12" FontSize="60" Foreground="White"/>
+        <StackPanel Name="handle" Grid.Row="1" Opacity="0.9" Background="Black" MouseUp="OnHandleMouseUp">
+            <Border BorderBrush="LightGray" BorderThickness="0,1,0,1" Margin="2">
+                <Border BorderBrush="LightGray" BorderThickness="0,1,0,1" Margin="2" Padding="1"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

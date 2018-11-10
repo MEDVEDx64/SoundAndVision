@@ -1,0 +1,25 @@
+﻿<Window x:Class="Massacre.Snv.DisplayServer.Windows.FullScreenDisplayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Massacre.Snv.DisplayServer.Controls"
+        mc:Ignorable="d"
+        Title="Remote display" Height="600" Width="1024"
+        Background="Black" Margin="0" Padding="0"
+        Icon="/Massacre.Snv.DisplayServer;component/server.ico">
+    <Grid>
+        <Image Name="image" Source="{Binding Image}"/>
+        <WrapPanel Name="panel" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Image Name="restoreIcon" Width="32" Height="32" Margin="8,8,4,8"
+                   Source="pack://application:,,,/Massacre.Snv.DisplayServer;component/Icons/fullscreen_quit.png"
+                   ToolTip="Windowed mode"/>
+            <Image Name="closeIcon" Width="32" Height="32" Margin="4,8,8,8"
+                   Source="pack://application:,,,/Massacre.Snv.DisplayServer;component/Icons/fullscreen_close.png"
+                   ToolTip="Close"/>
+        </WrapPanel>
+        
+        <controls:DropDownHeader HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-6,0,0"
+                                 Opacity="{Binding Opacity, ElementName=panel}" Text="{Binding WindowHeader}"/>
+    </Grid>
+</Window>

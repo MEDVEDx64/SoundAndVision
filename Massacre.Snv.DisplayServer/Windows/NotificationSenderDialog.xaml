@@ -1,0 +1,28 @@
+﻿<Window x:Class="Massacre.Snv.DisplayServer.Windows.NotificationSenderDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Send a notification" Height="120" Width="360"
+        ShowInTaskbar="False" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBox Grid.Row="0" Name="textBox" Margin="2,2,2,0" AcceptsReturn="True"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="112"/>
+                <ColumnDefinition Width="112"/>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox Grid.Column="0" Name="soundCheckBox" Content="Sound" IsChecked="True" Margin="2" VerticalAlignment="Center"/>
+            <Button Grid.Column="1" Margin="2" Content="Send" Click="OnSendButtonClick"/>
+            <Button Grid.Column="2" Margin="2" Content="Cancel" IsCancel="True"/>
+        </Grid>
+    </Grid>
+</Window>
